@@ -1,0 +1,195 @@
+body {
+margin: 0;
+background: #1b0298;
+/* Hey Comment */
+font-family: Georgia, 'Times New Roman' , Times, serif;
+font-weight:300
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #60cffa;
+
+}
+header::after {
+    content: '';
+    display:table;
+    clear: both;
+}
+
+.logo{
+    float: left;
+    height: 111px;
+
+}
+
+nav {
+    float: center;
+
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 25px;
+    position: relative;
+
+}
+
+nav a{
+    
+    text-decoration: none; /* took away the hyperlink appearance*/
+    text-transform: uppercase;
+    font-size: 30px;
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #470aed, #ef2ae2);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+nav a:hover {
+color:#d43a3a
+
+}
+
+nav a::before{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0%;
+    background-color: #d20f0f;
+    position: absolute;
+    top: 0px;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+.column {
+    display: grid;
+    gap :1em;
+    grid-template-columns: 1fr;
+}
+
+.portfolio-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns:repeat(auto-fit, minmax(20rem, 1fr));
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+}
+
+.portfolio-card{
+
+    background: rgb(69, 101, 242);
+    border-radius: 10px 10px;
+    padding-left: .5rem;
+    padding-top: .5rem;
+    padding-right: .5rem;
+
+}
+
+/*
+
+.grid-col-span-2 {
+    background:#141414;
+    grid-column: span 2;
+
+
+}
+
+.grid-col-span-3 {
+    background:#ead480;
+    grid-column: span 2;
+
+}
+.grid-col-span-6 {
+    background:#ead480;
+    grid-column: span 2;
+
+}
+
+.grid-col-span-7 {
+    background:#ead480;
+    grid-column: span 3;
+
+}
+*/
+.card__img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px 10px;
+}
+/* later to be deleted
+.grid-col-span-3{
+    background:#75cdf3;
+    grid-column: span 3;
+    max-height: 30rem;
+}
+
+.grid-col-span-3 .card__img {
+    max-height: 20rem;
+}
+*/
+
+/* this can be used for anything to make it responsive*/
+@media screen and (min-width: 60em) {
+    header {
+        background:#0006ac;
+    }
+
+    .portfolio-grid{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+    
+.grid-col-span-2 {
+    background:#190274;
+    grid-column: span 2;
+
+
+}
+
+.grid-col-span-3 {
+    background:#ead480;
+    grid-column: span 2;
+
+}
+.grid-col-span-6 {
+    background:#ead480;
+    grid-column: span 2;
+
+}
+
+.grid-col-span-7 {
+    background:#ead480;
+    grid-column: span 3;
+
+}
+    .grid-col-span-3{
+        background:#75cdf3;
+        grid-column: span 3;
+        max-height: 30rem;
+    }
+    
+    .grid-col-span-3 .card__img {
+        max-height: 20rem;
+    }
+}
